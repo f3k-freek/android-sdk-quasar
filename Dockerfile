@@ -4,12 +4,6 @@ FROM androidsdk/android-30
 
 ENV NODE_MAJOR=16
 
-# Set up the workspace directory
-WORKDIR /app
-
-# Copy your Quasar app files into the container
-COPY . .
-
 # Install required packages
 RUN apt-get update -y && apt-get install -y \
     ca-certificates \
