@@ -6,7 +6,7 @@ This Docker image is tailored for building Android applications with the Quasar 
 
 The Docker image is based on:
 
-- `skumar2998/android-30-ubuntu-2204:latest`
+`skumar2998/android-30-ubuntu-2204:latest`
 
 This base image includes the Android SDK and build tools for API level 30, corresponding to Android 11.0 (R), as well as Ubuntu 22.04 LTS.
 
@@ -14,9 +14,7 @@ This base image includes the Android SDK and build tools for API level 30, corre
 
 ### ubuntu2204-android30-node16-cordova12-quasar2
 
-```css
-f3ktech/android-sdk-quasar:ubuntu2204-android30-node16-cordova12-quasar2
-```
+`f3ktech/android-sdk-quasar:ubuntu2204-android30-node16-cordova12-quasar2`
 
 | Component              | Version                       |
 |------------------------|-------------------------------|
