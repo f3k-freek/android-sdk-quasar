@@ -14,6 +14,10 @@ This base image includes the Android SDK and build tools for API level 30, corre
 
 ### ubuntu2204-android30-node16-cordova12-quasar2
 
+```css
+f3ktech/android-sdk-quasar:ubuntu2204-android30-node16-cordova12-quasar2
+```
+
 | Component              | Version                       |
 |------------------------|-------------------------------|
 | Ubuntu                 | 22.04 LTS                     |
