@@ -1,5 +1,11 @@
 FROM ubuntu:22.04
 
+# Set the Android SDK environment variable
+ENV ANDROID_HOME /usr/lib/android-sdk
+
+# Add the Android SDK tools to the PATH environment variable
+ENV PATH $PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
+
 # Update and install essential packages
 RUN apt-get update -y && \
     apt-get install -y git ca-certificates curl gnupg software-properties-common jq unzip
@@ -31,8 +37,11 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Gradle
-RUN curl -L https://services.gradle.org/distributions/gradle-7.1.1-bin.zip -o gradle-7.1.1-bin.zip && \
+ENV PATH $PATH:/opt/gradle/gradle-7.6/bin
+RUN curl -L https://services.gradle.org/distributions/gradle-7.6-bin.zip -o gradle-7.6-bin.zip && \
     mkdir /opt/gradle && \
-    unzip -d /opt/gradle gradle-7.1.1-bin.zip
+    unzip -d /opt/gradle gradle-7.6-bin.zip && \
+    rm gradle-7.6-bin.zip && \
+    ln -s /opt/gradle/gradle-7.6/bin/gradle /usr/local/bin/gradle
 
 RUN npm install -g @quasar/cli@2.3.0 cordova@12.0.0
