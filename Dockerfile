@@ -22,7 +22,7 @@ RUN /usr/lib/android-sdk/cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=/
 
 # Add NodeSource's repository for Node.js 16 and install Node.js
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
-    add-apt-repository "deb https://deb.nodesource.com/node_16.x $(lsb_release -cs) main" && \
+    add-apt-repository "deb https://deb.nodesource.com/node_18.x $(lsb_release -cs) main" && \
     apt-get update && \
     apt-get install -y nodejs
 
@@ -34,3 +34,4 @@ RUN apt-get clean && \
 RUN curl -L https://services.gradle.org/distributions/gradle-7.1.1-bin.zip -o gradle-7.1.1-bin.zip && \
     mkdir /opt/gradle && \
     unzip -d /opt/gradle gradle-7.1.1-bin.zip
+
