@@ -35,3 +35,4 @@ RUN curl -L https://services.gradle.org/distributions/gradle-7.1.1-bin.zip -o gr
     mkdir /opt/gradle && \
     unzip -d /opt/gradle gradle-7.1.1-bin.zip
 
+RUN npm install -g @quasar/cli@2.3.0 cordova@12.0.0
