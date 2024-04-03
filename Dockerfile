@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM gradle:7.6-jdk11-jammy
 
 # Set the Android SDK environment variable
 ENV ANDROID_HOME /usr/lib/android-sdk
@@ -7,11 +7,8 @@ ENV ANDROID_HOME /usr/lib/android-sdk
 ENV PATH $PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 
 # Update and install essential packages
-RUN apt-get update -y && \
+RUN apt-get update -y &&  \
     apt-get install -y git ca-certificates curl gnupg software-properties-common jq unzip
-
-# Install Java, required by Android SDK
-RUN apt-get install -y openjdk-11-jdk
 
 # Download and setup Android command line tools
 RUN mkdir -p /usr/lib/android-sdk/cmdline-tools && \
@@ -36,12 +33,4 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key ad
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Gradle
-ENV PATH $PATH:/opt/gradle/gradle-7.6/bin
-RUN curl -L https://services.gradle.org/distributions/gradle-7.6-bin.zip -o gradle-7.6-bin.zip && \
-    mkdir /opt/gradle && \
-    unzip -d /opt/gradle gradle-7.6-bin.zip && \
-    rm gradle-7.6-bin.zip && \
-    ln -s /opt/gradle/gradle-7.6/bin/gradle /usr/local/bin/gradle
-
-RUN npm install -g @quasar/cli@2.3.0 cordova@12.0.0
+RUN npm install -g @quasar/cli@2.4.0 cordova@12.0.0

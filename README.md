@@ -28,23 +28,7 @@ This base image includes the Android SDK and build tools for API level 30, corre
 | Quasar CLI             | 2.3.0                         |
 | Cordova                | 12.0.0                        |
 
-### ubuntu2204-android30-node16-cordova12-quasar2
-
-`f3ktech/android-sdk-quasar:ubuntu2204-android33-node16-cordova12-quasar2`
-
-| Component              | Version                       |
-|------------------------|-------------------------------|
-| Ubuntu                 | 22.04 LTS                     |
-| Node.js                | 16.x                          |
-| npm                    | Corresponding to Node.js 16.x |
-| Android SDK            | API level 33                  |
-| Android Build Tools    | 33.0.2                        |
-| Target Android Version | 13.0 (T)                      |
-| Gradle                 | 7.1.1                         |
-| Quasar CLI             | 2.3.0                         |
-| Cordova                | 12.0.0                        |
-
-### ubuntu2204-android30-node18-cordova12-quasar2
+### ubuntu2204-android33-node18-cordova12-quasar2
 
 `f3ktech/android-sdk-quasar:ubuntu2204-android33-node18-cordova12-quasar2`
 
@@ -52,10 +36,10 @@ This base image includes the Android SDK and build tools for API level 30, corre
 |------------------------|-------------------------------|
 | Ubuntu                 | 22.04 LTS                     |
 | Node.js                | 18.x                          |
-| npm                    | Corresponding to Node.js 16.x |
+| npm                    | Corresponding to Node.js 18.x |
 | Android SDK            | API level 33                  |
 | Android Build Tools    | 33.0.2                        |
 | Target Android Version | 13.0 (T)                      |
-| Gradle                 | 7.1.1                         |
-| Quasar CLI             | 2.3.0                         |
+| Gradle                 | 7.6                           |
+| Quasar CLI             | 2.4.0                         |
 | Cordova                | 12.0.0                        |
