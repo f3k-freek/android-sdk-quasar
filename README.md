@@ -16,7 +16,7 @@ This Docker image is tailored for building Android applications with the Quasar 
 | Node.js                | 18.x                          |
 | npm                    | Corresponding to Node.js 18.x |
 | Android SDK            | API level 33                  |
-| Android Build Tools    | 33.0.2                        |
+| Android Build Tools    | 33.0.3                        |
 | Target Android Version | 13.0 (T)                      |
 | Quasar CLI             | 2.4.0                         |
 | Cordova                | 12.0.0                        |

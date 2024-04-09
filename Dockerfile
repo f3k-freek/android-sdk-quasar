@@ -21,7 +21,7 @@ RUN chmod +x /usr/lib/android-sdk/cmdline-tools/cmdline-tools/bin/sdkmanager && 
     yes | /usr/lib/android-sdk/cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk --licenses
 
 # Install Android 33 SDK and build tools 33.0.2
-RUN /usr/lib/android-sdk/cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk "platforms;android-33" "build-tools;33.0.2"
+RUN /usr/lib/android-sdk/cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk "platforms;android-33" "build-tools;33.0.3"
 
 # Add NodeSource's repository for Node.js 16 and install Node.js
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
