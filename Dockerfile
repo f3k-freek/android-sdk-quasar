@@ -26,4 +26,4 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key ad
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN npm install -g @quasar/cli@2.4.1 cordova@13.0.0
+RUN npm install -g @quasar/cli@2.4.1 cordova@12.0.0

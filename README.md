@@ -4,9 +4,9 @@ This Docker image is tailored for building Android applications with the Quasar 
 
 ## Versions and Components
 
-### ubuntu2204-android34-node18-cordova13-quasar2
+### ubuntu2204-android34-node18-cordova12-quasar2
 
-`f3ktech/android-sdk-quasar:ubuntu2204-android34-node18-cordova13-quasar2`
+`f3ktech/android-sdk-quasar:ubuntu2204-android34-node18-cordova12-quasar2`
 
 | Component              | Version                       |
 |------------------------|-------------------------------|
@@ -19,7 +19,7 @@ This Docker image is tailored for building Android applications with the Quasar 
 | Android Build Tools    | 34.0.0                        |
 | Target Android Version | 14.0 (U)                      |
 | Quasar CLI             | 2.4.1                         |
-| Cordova                | 13.0.0                        |
+| Cordova                | 12.0.0                        |
 
 ### ubuntu2204-android33-node18-cordova12-quasar2
 
