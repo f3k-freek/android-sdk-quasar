@@ -12,10 +12,12 @@ RUN mkdir -p /usr/lib/android-sdk/cmdline-tools && \
     unzip -o cmdline-tools.zip -d /usr/lib/android-sdk/cmdline-tools && \
     rm cmdline-tools.zip
 
-RUN chmod +x /usr/lib/android-sdk/cmdline-tools/cmdline-tools/bin/sdkmanager && \
-    yes | /usr/lib/android-sdk/cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk --licenses
+RUN mv /usr/lib/android-sdk/cmdline-tools/cmdline-tools /usr/lib/android-sdk/cmdline-tools/latest
 
-RUN /usr/lib/android-sdk/cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk "platforms;android-34" "build-tools;34.0.0"
+RUN chmod +x /usr/lib/android-sdk/cmdline-tools/latest/bin/sdkmanager && \
+    yes | /usr/lib/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=/usr/lib/android-sdk --licenses
+
+RUN /usr/lib/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=/usr/lib/android-sdk "platforms;android-34" "build-tools;34.0.0"
 
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
     add-apt-repository "deb https://deb.nodesource.com/node_18.x $(lsb_release -cs) main" && \
